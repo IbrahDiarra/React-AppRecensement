@@ -1,0 +1,13 @@
+.login-container{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  @media (max-width:1300px) {
+      .login-container{
+        padding: 0 1.5rem;
+      }
+    }

@@ -1,0 +1,91 @@
+.contact-form-content{
+    width: 42rem;
+    background-color: #252532;
+    border-radius: 0.7rem;
+    border: 1px solid #535354;
+ 
+}
+
+.contact-form-content h6{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #535354;
+    text-align: center;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.8rem;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.5rem;
+    padding: 1rem;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5rem;
+}
+
+form input,
+form select{
+    flex: 1;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #fff;
+    background: #1a2634;
+    border-radius: 0.6rem;
+    border: 0.3px solid #535354;
+    padding: 1rem;
+
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+form button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border: 1.5px solid #a892fe;
+    border-radius: 0.6rem;
+    background: linear-gradient(90deg, #8f74fc 0%, #4337f6 100%);
+    padding: 0.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+form button:hover{
+    color: #a892fe;
+}
+
+@media (max-width : 450px){
+    
+    .name-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form input,
+    form textarea{
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+    }
+
+    form button{
+        font-size: 0.9rem;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+    }
+}
