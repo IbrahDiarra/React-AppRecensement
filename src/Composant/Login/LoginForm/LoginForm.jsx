@@ -1,40 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 const LoginForm = () => {
-  const [phone, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleChangePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:5000/users/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ phone, password })
-      });
+    const phone = e.target.elements.phone.value;
+    const password = e.target.elements.password.value;
 
-      if (response.ok) {
-        //const data = await response.json();
-        alert('Authentification réussie');
-        // Stockez le token ou redirigez l'utilisateur
-        // par exemple: localStorage.setItem('token', data.token);
-      } else {
-        alert('Numero de telephone ou mot de passe incorrect');
-      }
-    } catch (error) {
-      console.error('Erreur:', error);
-      alert('Erreur lors de la connexion');
+    if (phone === '0545885512' && password === '1234567') {
+      navigate('/accueil');
+    } else {
+      alert('Numéro de téléphone ou mot de passe incorrect');
     }
   };
 
@@ -44,11 +23,11 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="name-container">
           <span>Telephone</span>
-          <input type="text" name="phone" placeholder='Telephone' value={phone} onChange={handleChangeEmail} required />
+          <input type="text" name="phone" placeholder='Telephone' required />
         </div>
         <div className="name-container">
           <span>Mot de Passe</span>
-          <input type="password" name="password" placeholder='Mot de Passe' value={password} onChange={handleChangePassword} required />
+          <input type="password" name="password" placeholder='Mot de Passe' required />
         </div>
         <div className='remember'>
           <div className='cbox'>

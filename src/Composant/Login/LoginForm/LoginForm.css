@@ -1,6 +1,6 @@
 .contact-form-content{
     width: 42rem;
-    background-color: rgb(48, 48, 58);
+    background-color: #fff;
     border-radius: 0.7rem;
     border: 1px solid #535354;
  
@@ -43,8 +43,8 @@ form textarea{
     flex: 1;
     width: 100%;
     font-size: 0.9rem;
-    color: #fff;
-    background: #1a2634;
+    color: #1c1c1c;
+    background: #f0f0f0;
     border-radius: 0.6rem;
     border: 0.3px solid #535354;
     padding: 1rem;

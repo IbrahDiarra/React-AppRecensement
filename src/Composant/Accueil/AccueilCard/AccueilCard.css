@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #252532;
+    background: #fff;
     border-radius: 0.65rem;
     border: 1px solid #535354;
     padding: 1.5rem;
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
+    border-radius: 0.9rem;
     background: #1a2634;
     border: 1px solid #535354;
     margin-bottom: 0.8rem;
@@ -32,6 +32,7 @@
 .contact-details-card h6{
     font-size: 1.5rem;
     font-weight: bold;
+    color: #1a2634;
 }
 
 .contact-details-card h4{
@@ -39,4 +40,5 @@
     font-weight: 400;
     text-align: center;
     margin-top: 0.3rem;
+    color: #1a2634;
 }

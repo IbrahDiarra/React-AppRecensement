@@ -20,7 +20,7 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/users/register', {
+      const response = await fetch('https://git-codecommit.eu-north-1.amazonaws.com/v1/repos/awec_api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -70,9 +70,13 @@ const RegisterForm = () => {
             <label>Numero de Tel</label>
             <input type="text" name="phone" placeholder='Numero de Tel' value={formData.phone} onChange={handleChange} required />
           </div>
+          
           <div className='input-box'>
             <label>Role</label>
-            <input type="text" name="role" placeholder='Role' value={formData.role} onChange={handleChange} />
+            <select name="role"  value={formData.role} onChange={handleChange}>
+              <option value="collecteur">Collecteur</option>
+              <option value="recenseur">Recenseur</option>
+            </select>
           </div>
         </div>
 
