@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'primeicons/primeicons.css';
-import { PrimeReactProvider } from 'primereact/api';
 import 'primeflex/primeflex.css';  
 import 'primereact/resources/primereact.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
@@ -15,9 +14,10 @@ import './flags.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import VoirUser from './Composant/VoirUser/VoirUser';
 import Register from './Composant/Register/Register';
 import Accueil from './Composant/Accueil/Accueil';
+import VoirMarchand from './Composant/VoirMarchand/VoirMarchand';
+import VoirUser from './Composant/VoirUser/VoirUser';
 
 
 const router = createBrowserRouter([
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "marchands",
-    element: <VoirUser/>,
+    element: <VoirMarchand/>,
   },
   {
     path: "recenseur",
@@ -36,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "accueil",
     element: <Accueil/>,
+  },
+  {
+    path: "voir-recenseur",
+    element: <VoirUser/>,
   },
 ]);
 

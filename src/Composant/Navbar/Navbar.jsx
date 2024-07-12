@@ -30,7 +30,7 @@ const NavBar = () =>{
                         
 
                         <button className="contact-btn" onClick={() => {}}>
-                            Login
+                            BIENVENUE
                         </button>
                     </ul>
 
