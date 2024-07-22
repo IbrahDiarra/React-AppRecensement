@@ -1,7 +1,7 @@
 import React from 'react';
 import './VoirUser.css';
 import NavBar from '../Navbar/Navbar';
-import UserTable from './UserTable/UserTable';
+import UserTable from './UserTable/UserTable'
 
 const VoirUser = () => {
   return (
